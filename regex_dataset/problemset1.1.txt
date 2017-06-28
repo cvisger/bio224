@@ -1,0 +1,82 @@
+1. I am planning on starting a new career as a spammer. I need to get a
+bunch of e-mail addresses, so I want a regular expression that I can use
+to search text files and match an e-mail address. I want to focus on
+.edu addresses. Write a regular expression that will match email
+addresses that end in .edu.
+
+ .*@.*\.edu$
+
+
+
+2. OK, my spamming career didn't pan out and now I am the new Vice
+President of Pricing at Gizmos-R-Us. Everyone knows that prices that end
+in 99¢ trick people into thinking the item it cheaper than it really is,
+so my first task is to change the price of every item Gizmos-R-Us sells
+to end in 99¢--so the $10.00 item will be $10.99, the $3.50 item $3.99
+and the $2,300.00 item $2,300.99. Here's part of the catalog, write the
+find and replace regular expressions to make the change. Be careful not
+to mess up the product descriptions.
+
+Socks: $2.34 
+Door stops: $4.56 
+Thermometers (0.00 to 100.00 degrees): $5.00 
+Data loggers: $1,250.00 
+$5 bills from 1856: $5.50
+
+(.*\$.+)\.\d+
+\1.99
+
+3. Paste some text into a text document. Write regular expressions that
+will match:
+
+All words with double letters (ll, ee, oo, etc).  
+
+(\w+?(\w)\1\w*)\s
+
+ Words with at exactly 3 e’s (sequence) 
+\w*e{3}\w*
+
+ A line of text that does not have an "e" in it. 
+^[^e]*$
+
+4. What you think will match will not always be what matches.  In some
+regular expressions you have to watch out for greedyness.  In the line
+below, find an expression that matches just the tags (the angle brackets
+and what is inside them), but not the word greedy:
+
+      This is a <EM>greedy</EM> test.
+
+[</]?\w+[>]
+
+
+
+
+
+5. The first attached file, GNV.1943to2012.daily.txt, has the daily
+temperature readings from the Gainesville Airport from 1943 to 2012. The
+format of this file is explained in the second file,
+GNV.weather.details.txt. Use these file for the following exercises.
+
+
+
+GNV.1943to2012.daily.txtPreview the documentView in a new window
+
+GNV.weather.details.txtPreview the documentView in a new window
+
+
+
+There is way too much data in these files! I just want to know the high,
+low and mean temperature for each day. Using regular expressions in a
+text editor, make a new file that has the following format:
+
+YearMoDa \t High \t Low \t Mean
+
+
+
+Paste the search string here:
+
+\S*\s+\S*\s+(\S*)\s+(\S*)\s+\S*\s+\S*\s+\S*\s+\S*\s+\S*\s+\S*\s+\S*\s+(\S*)\s+(\S*).*\r
+
+Paste the replace string here:
+
+\1\t\3\t\4\t\2\r
