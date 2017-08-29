@@ -1,5 +1,5 @@
 Once logged into a Ubuntu EC2 instance do the following to install the
-required software, etc.
+required software, etc...
 
 ```
 wget https://raw.githubusercontent.com/cvisger/bio224/master/aws_setup_lite_p1.sh
