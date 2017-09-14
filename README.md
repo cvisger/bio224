@@ -17,8 +17,4 @@ chmod +x aws*
 follow the prompts, install to defaults, and retain the local versons
 when you see the graphic prompt
 
-```
-./aws_setup_lite_p2.sh
-```
-
 When you are done close out your terminal, open a new one, and reconnect to your EC2 instance
