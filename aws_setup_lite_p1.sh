@@ -7,12 +7,16 @@ echo '[[ -r ~/.bashrc ]] && . ~/.bashrc' >>~/.bash_profile
 source ~/.bash_profile
 export PATH=~/bin:$PATH:/home/ubuntu/miniconda3/bin
 exec bash
-sudo apt install linuxbrew-wrapper
-brew tap homebrew/science
-brew tap homebrew/versions
 conda config --add channels r
 conda config --add channels conda-forge
 conda config --add channels bioconda
+conda install ruby -y
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+sudo apt install linuxbrew-wrapper
+test -d ~/.linuxbrew && PATH="$HOME/.linuxbrew/bin:$PATH"
+test -d /home/linuxbrew/.linuxbrew && PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+test -r ~/.bash_profile && echo 'export PATH="$(brew --prefix)/bin:$PATH"' >>~/.bash_profile
+brew tap homebrew/science
 echo "
 #
 # A minimal BASH profile.
