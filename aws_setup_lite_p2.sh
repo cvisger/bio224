@@ -1,33 +1,8 @@
 #!/bin/bash
-conda config --add channels r
+conda config --add channels R
 conda config --add channels conda-forge
 conda config --add channels bioconda
-conda install jupyter -y
-conda install bwa -y
-conda install htslib -y
-conda install bowtie2 -y
-conda install bedtools -y
-conda install samtools -y
-conda install bamtools -y
-conda install sra-tools -y
-conda install entrez-direct -y
-conda install fastqc -y
-conda install cutadapt -y
-conda install trimmomatic -y
-conda install emboss -y
-conda install seqtk -y
-conda install bbmap -y
-conda install datamash -y
-conda install perl-lwp-protocol-https -y
-conda install bcftools -y
-conda install freebayes -y
-conda install gatk -y
-conda install picard -y
-conda install vt -y
-conda install snpeff -y
-conda install subread -y
-conda install bioawk -y
-conda install hisat2 -y
+
 
 echo "
 #
