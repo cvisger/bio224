@@ -3,7 +3,6 @@ required software, etc...
 
 ```
 wget https://raw.githubusercontent.com/cvisger/bio224/master/aws_setup_lite_p1.sh
-wget https://raw.githubusercontent.com/cvisger/bio224/master/aws_setup_lite_p2.sh
 ```
 
 ```
