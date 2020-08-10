@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt-get update && sudo apt-get upgrade -y
 curl http://data.biostarhandbook.com/install/aptget.txt | xargs sudo apt-get -y install
-curl -O https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 echo '[[ -r ~/.bashrc ]] && . ~/.bashrc' >>~/.bash_profile
 source ~/.bash_profile
